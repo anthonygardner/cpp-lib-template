@@ -4,7 +4,7 @@ build.cpp:
 	cmake --build build --target install -j$(nproc)
 
 build.python:
-	uv pip install -e .
+	uv pip install -e ".[dev]"
 
 clean:
 	rm -fr build

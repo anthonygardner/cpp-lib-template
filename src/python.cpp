@@ -5,7 +5,7 @@
 namespace py = pybind11;
 
 PYBIND11_MODULE(_mylib, m) {
-    m.doc() = "mylib Python bindings";
+    m.doc() = "Python bindings for mylib";
 
     m.def(
         "hello",

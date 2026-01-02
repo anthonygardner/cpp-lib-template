@@ -58,7 +58,7 @@ if(BUILD_CXX_TESTS)
 
     add_executable(
         mylib_test
-        tests/test.cpp
+        tests/mylib_test.cpp
     )
 
     target_link_libraries(
