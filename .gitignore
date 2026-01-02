@@ -1,5 +1,8 @@
 build/
-**/__pycache__/
+
 *.egg-info/
+
+**/__marimo__/
+**/__pycache__/
 
 *.so
