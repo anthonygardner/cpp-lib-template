@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.15...4.1)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 project(
     CppLibraryTemplate
@@ -42,7 +43,7 @@ target_include_directories(
 if(BUILD_PYTHON_API)
     pybind11_add_module(
         _mylib
-        src/python.cpp
+        src/bindings.cpp
     )
 
     target_link_libraries(_mylib PRIVATE mylib)

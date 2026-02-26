@@ -1,9 +1,9 @@
-.PHONY: build.cpp build.python clean install notebook test.cpp test.python
+.PHONY: build.cpp build.py clean install notebook test.cpp test.py
 
 build.cpp:
-	cmake --build build --target install -j$(nproc)
+	cmake -S . -B build -DPython3_EXECUTABLE=$$(uv run which python) && cmake --build build -j
 
-build.python:
+build.py:
 	uv pip install -e ".[dev]"
 
 clean:
@@ -18,5 +18,5 @@ notebook:
 test.cpp:
 	cd build && ctest && cd -
 
-test.python:
+test.py:
 	uv run pytest

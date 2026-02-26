@@ -10,6 +10,8 @@ A template for C++ libraries with Python bindings, testing, and marimo notebook 
 
 ## Setup
 
+### Installation
+
 ```bash
 # Configure CMake
 cmake -B build -DCMAKE_INSTALL_PREFIX=build/install
@@ -18,20 +20,10 @@ cmake -B build -DCMAKE_INSTALL_PREFIX=build/install
 make build.cpp
 
 # Install Python package in development mode
-make build.python
+make build.py
 ```
 
-## Testing
-
-```bash
-# Run C++ tests
-make test.cpp
-
-# Run Python tests
-make test.python
-```
-
-## Development
+### Development
 
 ```bash
 # Remove build artifacts
@@ -41,7 +33,18 @@ make clean
 make notebook
 ```
 
-## Project Structure
+### Testing
+
+```bash
+# Run C++ tests
+make test.cpp
+
+# Run Python tests
+make test.py
+```
+
+## Project Tree
+
 ```
 cpp-lib-template/
 ├── include/           # C++ headers
